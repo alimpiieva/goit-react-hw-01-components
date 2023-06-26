@@ -29,4 +29,4 @@ const App = () => (
 
 export default App;
 
-const root = document.getElementById("root");
+
