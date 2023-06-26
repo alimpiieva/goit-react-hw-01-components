@@ -43,5 +43,5 @@ export const Name = styled.p`
 export const FriendListStyle = styled.ul`
   display: flex;
   justify-content: center;
-  flex-direction: row
+  flex-direction: row;
 `; 

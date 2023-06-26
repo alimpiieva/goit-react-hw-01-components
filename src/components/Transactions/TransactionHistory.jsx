@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TransactionItem  from './TransactionItem.jsx';
+
 import {
     TransactionTable,
     TableHead,
-    TableHeader,
     TableRow,
-    TableCell,
+    TableHeader,
     TableBody
-} from './TransactionHistory.styled';
+}
+    from './TransactionHistory.styled';
 
 const TransactionHistory = ({ items }) => (
     <TransactionTable>
@@ -31,30 +33,11 @@ TransactionHistory.propTypes = {
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             type: PropTypes.string.isRequired,
-            amount: PropTypes.number.isRequired,
+            amount: PropTypes.string.isRequired,
             currency: PropTypes.string.isRequired,
         })
     ).isRequired,
 };
 
-const TransactionItem = ({ transaction }) => {
-    const { type, amount, currency } = transaction;
-
-    return (
-        <TableRow>
-            <TableCell>{type}</TableCell>
-            <TableCell>{amount}</TableCell>
-            <TableCell>{currency}</TableCell>
-        </TableRow>
-    );
-};  
-
-TransactionItem.propTypes = {
-    transaction: PropTypes.shape({
-        type: PropTypes.string.isRequired,
-        amount: PropTypes.number.isRequired,
-        currency: PropTypes.string.isRequired,
-    }).isRequired,
-};
 
 export default TransactionHistory;

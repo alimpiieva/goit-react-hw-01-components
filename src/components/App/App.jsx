@@ -1,14 +1,14 @@
 import React from 'react';
 import Profile from '../Profile/Profile';
-import user from '../user.json';
+import user from '../Data/user.json';
 import Statistics from '../Statisctics/Statistics';
-import data from '../data.json';
+import data from '../Data/data.json';
 import FriendList from '../Friends/Friends.jsx';
-import friends from '../friends.json';
-import ReactDOM from 'react-dom';
+import friends from '../Data/friends.json';
 import TransactionHistory from '../Transactions/TransactionHistory.jsx';
-import transactions from '../transactions.json';
+import transactions from '../Data/transactions.json';
 import { Container } from './App.styled';
+
 
 const App = () => (
     <Container>
@@ -19,13 +19,10 @@ const App = () => (
         avatar={user.avatar}
         stats={user.stats}
       />
-      <FriendList
-        friends={friends}
-      />
+      <FriendList friends={friends} />
       <Statistics
         title="Upload stats" stats={data}
       />
-     
       <TransactionHistory items={transactions} />
     </Container>
   );
@@ -33,5 +30,3 @@ const App = () => (
 export default App;
 
 const root = document.getElementById("root");
-
-ReactDOM.createRoot(root).render(<App />);
