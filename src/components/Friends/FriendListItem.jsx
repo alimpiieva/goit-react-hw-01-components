@@ -14,6 +14,9 @@ const FriendListItem = ({ friend }) => {
     );
 };
 
+
+
+
 FriendListItem.propTypes = {
     friend: PropTypes.shape({
         avatar: PropTypes.string.isRequired,
